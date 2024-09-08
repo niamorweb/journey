@@ -22,7 +22,6 @@
     <div class="flex flex-col gap-3">
       <UButton
         v-if="profileData"
-        size="lg"
         class="whitespace-nowrap"
         :to="`/user/${profileData.username}`"
         target="_blank"
@@ -30,7 +29,7 @@
         <span class="hidden lg:flex">See my profile</span>
         <LucideUser class="flex lg:hidden" />
       </UButton>
-      <UButton size="lg" color="white" variant="solid">
+      <UButton color="white" variant="solid">
         <span class="hidden lg:flex">Log out</span>
         <LucideLogOut class="flex lg:hidden"
       /></UButton>

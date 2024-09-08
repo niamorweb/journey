@@ -65,7 +65,7 @@ const deletePost = async (post) => {
       class="flex flex-col gap-3 lg:flex-row items-start lg:items-center lg:justify-between"
     >
       <h2 class="text-2xl lg:text-4xl font-bold font-title">All your posts</h2>
-      <UButton size="xl" to="/dashboard/blog/create">Create a new post</UButton>
+      <UButton to="/dashboard/blog/create">Create a new post</UButton>
     </div>
     <div
       class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -85,7 +85,6 @@ const deletePost = async (post) => {
           <p>Created at : {{ generateFormattedDate(post.created_at) }}</p>
           <div class="flex items-center gap-3 self-end mt-4">
             <UButton
-              size="lg"
               color="gray"
               label="Delete"
               @click="modalsState[post.id] = true"
@@ -103,10 +102,7 @@ const deletePost = async (post) => {
               </div>
             </UModal>
 
-            <UButton
-              size="lg"
-              color="gray"
-              :to="`/dashboard/blog/edit/${post.id}`"
+            <UButton color="gray" :to="`/dashboard/blog/edit/${post.id}`"
               >Edit</UButton
             >
           </div>

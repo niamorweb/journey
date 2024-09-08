@@ -180,8 +180,10 @@ const user = useSupabaseUser();
     </div>
   </section>
 
-  <section class="px-4 lg:px-16">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
+  <section class="px-4 lg:px-16 justify-center items-center">
+    <div
+      class="max-w-[2400px] mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
       <div
         class="flex flex-col gap-1 px-4 relative"
         v-for="(pro, index) in pros"
