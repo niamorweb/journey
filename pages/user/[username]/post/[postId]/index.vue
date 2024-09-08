@@ -76,7 +76,7 @@ onMounted(async () => {
           class="w-[50px] h-[50px] object-cover rounded-full"
           :src="
             profileData[0].avatar ||
-            'https://cdn.pixabay.com/photo/2016/11/21/16/59/animal-1846462_960_720.jpg'
+            'https://images.pexels.com/photos/1481581/pexels-photo-1481581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
           "
         />
         <h2 class="text-4xl font-bold">{{ profileData[0].username }}</h2>

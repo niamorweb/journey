@@ -37,7 +37,7 @@ const generateFormattedDate = (isoDateString) => {
       <div class="flex flex-col gap-4 items-center justify-center">
         <NuxtImg
           class="w-[150px] h-[150px] object-cover rounded-full"
-          src="https://cdn.pixabay.com/photo/2016/11/21/16/59/animal-1846462_960_720.jpg"
+          src="https://images.pexels.com/photos/1481581/pexels-photo-1481581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         />
         <h2 class="text-2xl lg:text-4xl font-bold">
           {{ profileData[0].username }}
