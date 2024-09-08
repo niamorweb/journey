@@ -396,7 +396,12 @@ const user = useSupabaseUser();
           Our platform is completely free to use and open source. Customize it
           the way you want!
         </p>
-        <UButton size="xl" color="black" type="submit"
+        <UButton
+          to="https://github.com/niamorweb/journey"
+          target="_blank"
+          size="xl"
+          color="black"
+          type="submit"
           ><LucideGithub /> View Source Code</UButton
         >
       </div>
