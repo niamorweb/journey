@@ -29,7 +29,7 @@ const generateFormattedDate = (isoDateString) => {
 </script>
 
 <template>
-  <section class="py-20 px-4 lg:px-10">
+  <section class="pt-10 pb-20 px-4 lg:px-10">
     <div
       class="flex flex-col items-center justify-center gap-20"
       v-if="profileData.length > 0"
@@ -54,6 +54,7 @@ const generateFormattedDate = (isoDateString) => {
           v-for="post in postsData"
         >
           <NuxtImg
+            class="w-full h-[200px] object-cover"
             :src="`https://rpnefuqdghxpqyfhiqcm.supabase.co/storage/v1/object/public/${post.image}`"
           />
           <div class="p-6 flex flex-col gap-3">
