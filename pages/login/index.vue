@@ -52,6 +52,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         </UFormGroup>
 
         <UButton class="self-end" size="xl" type="submit"> Submit </UButton>
+
+        <div class="mt-4">
+          Don't have an account ?
+          <NuxtLink to="/signup" class="text-green-500"
+            >Create an account</NuxtLink
+          >
+        </div>
       </UForm>
     </div>
   </section>

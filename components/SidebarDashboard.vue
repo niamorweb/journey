@@ -4,8 +4,9 @@
   >
     <div class="flex flex-col gap-10">
       <NuxtLink to="/">
-        <h2 class="text-3xl font-bold hidden lg:flex font-title">Journey</h2>
-        <LucideBook class="flex lg:hidden mx-auto" />
+        <h2 class="text-xs md:text-base lg:text-3xl font-bold font-title">
+          Journey
+        </h2>
       </NuxtLink>
 
       <UVerticalNavigation :links="links">
@@ -29,7 +30,7 @@
         <span class="hidden lg:flex">See my profile</span>
         <LucideUser class="flex lg:hidden" />
       </UButton>
-      <UButton color="white" variant="solid">
+      <UButton @click="handleSignOut" color="white" variant="solid">
         <span class="hidden lg:flex">Log out</span>
         <LucideLogOut class="flex lg:hidden"
       /></UButton>
@@ -40,6 +41,7 @@
 <script setup>
 const supabase = useSupabaseClient();
 const user = useSupabaseUser();
+const router = useRouter();
 
 const { data: profileData, error: profileError } = await supabase
   .from("profiles")
@@ -65,4 +67,9 @@ const links = [
   //   to: "/dashboard/settings",
   // },
 ];
+
+const handleSignOut = async () => {
+  await supabase.auth.signOut();
+  router.push("/");
+};
 </script>
